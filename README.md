@@ -8,7 +8,7 @@ Usage
 -----
 
 ```php
-$uploader = new \MultipartUploader\Uploader('http://example.com/');
+$uploader = new MultipartUploader_Uploader('http://example.com/');
 $uploader->addPart('key', 'value');
 $uploader->addPart('key2', 'value2');
 $uploader->addFile('file', '/path/to/some/file.json', 'application/json');

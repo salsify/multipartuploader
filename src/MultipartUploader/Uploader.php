@@ -1,7 +1,5 @@
 <?php
-namespace MultipartUploader;
-
-class Uploader {
+class MultipartUploader_Uploader {
   const EOL = "\r\n";
 
   // POST endpoint

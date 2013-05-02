@@ -59,12 +59,12 @@ class MultipartUploader_Uploader {
 
 
   // Performs the actual post now that the data is all set.
-  // Returns an instance of \HttpMessage
+  // Returns an instance of HttpMessage
   public function postData() {
     // definitely need the 2 EOLs at the end here
     $this->_data .= '--' . $this->_mime_boundary . '--' . self::EOL . self::EOL;
 
-    $request = new \HttpRequest($this->_url, \HTTP_METH_POST);
+    $request = new HttpRequest($this->_url, HTTP_METH_POST);
     $content_type = 'multipart/form-data; boundary=' . $this->_mime_boundary;
     $request->addHeaders(array('Content-Type' => $content_type));
     $request->setBody($this->_data);
